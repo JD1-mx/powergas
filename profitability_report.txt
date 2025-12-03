@@ -1,0 +1,99 @@
+
+================================================================================
+POWERGAS PROFITABILITY COMPARISON REPORT
+Generated: 2025-12-03 13:21:39
+================================================================================
+
+SUMMARY (Ranked by Profit)
+--------------------------------------------------------------------------------
+Rank  Scenario                 Profit (NGN)      Margin %    Route
+--------------------------------------------------------------------------------
+1     Scenario D: Ogbele            890,450.00      20.95%   Ogbele → Customer Location A
+2     Scenario C: Ikorodu           861,700.00      20.28%   Ikorodu → Customer Location A
+3     Scenario A: Ebedei            848,400.00      19.96%   Ebedei → Customer Location A
+4     Scenario B: Ore               774,200.00      18.22%   Ore → Customer Location A
+
+================================================================================
+DETAILED BREAKDOWN
+================================================================================
+
+1. Scenario D: Ogbele
+   Description: Delivery from Ogbele Mother Station to Customer Location A
+   Route: Ogbele → Customer Location A
+   ----------------------------------------------------------------------------
+   Revenue:                    NGN    4,250,000.00
+   Costs:
+     - Production Costs:       NGN    3,265,000.00
+     - Truck Expenses:         NGN       54,000.00
+     - Trucking Costs:         NGN       33,750.00
+     - Skid Costs:             NGN        6,800.00
+   Total Costs:                NGN    3,359,550.00
+   ---------------------------------------------------------------------------
+   PROFIT:                     NGN      890,450.00
+   Profit Margin:                        20.95%
+
+2. Scenario C: Ikorodu
+   Description: Delivery from Ikorodu Mother Station to Customer Location A
+   Route: Ikorodu → Customer Location A
+   ----------------------------------------------------------------------------
+   Revenue:                    NGN    4,250,000.00
+   Costs:
+     - Production Costs:       NGN    3,275,000.00
+     - Truck Expenses:         NGN       64,800.00
+     - Trucking Costs:         NGN       40,500.00
+     - Skid Costs:             NGN        8,000.00
+   Total Costs:                NGN    3,388,300.00
+   ---------------------------------------------------------------------------
+   PROFIT:                     NGN      861,700.00
+   Profit Margin:                        20.28%
+
+3. Scenario A: Ebedei
+   Description: Delivery from Ebedei Mother Station to Customer Location A
+   Route: Ebedei → Customer Location A
+   ----------------------------------------------------------------------------
+   Revenue:                    NGN    4,250,000.00
+   Costs:
+     - Production Costs:       NGN    3,250,000.00
+     - Truck Expenses:         NGN       86,400.00
+     - Trucking Costs:         NGN       54,000.00
+     - Skid Costs:             NGN       11,200.00
+   Total Costs:                NGN    3,401,600.00
+   ---------------------------------------------------------------------------
+   PROFIT:                     NGN      848,400.00
+   Profit Margin:                        19.96%
+
+4. Scenario B: Ore
+   Description: Delivery from Ore Mother Station to Customer Location A (closer distance)
+   Route: Ore → Customer Location A
+   ----------------------------------------------------------------------------
+   Revenue:                    NGN    4,250,000.00
+   Costs:
+     - Production Costs:       NGN    3,375,000.00
+     - Truck Expenses:         NGN       57,600.00
+     - Trucking Costs:         NGN       36,000.00
+     - Skid Costs:             NGN        7,200.00
+   Total Costs:                NGN    3,475,800.00
+   ---------------------------------------------------------------------------
+   PROFIT:                     NGN      774,200.00
+   Profit Margin:                        18.22%
+
+================================================================================
+COMPARATIVE ANALYSIS
+================================================================================
+
+Best Scenario:  Scenario D: Ogbele
+Worst Scenario: Scenario B: Ore
+
+Profit Difference:       NGN      116,250.00
+Margin Difference:                  2.73 percentage points
+
+Cost Component Impact Analysis:
+--------------------------------------------------------------------------------
+Production Costs Difference:    NGN     -110,000.00
+Truck Expenses Difference:      NGN       -3,600.00
+Trucking Costs Difference:      NGN       -2,250.00
+Skid Costs Difference:          NGN         -400.00
+
+Biggest Cost Impact: Production Costs (NGN 110,000.00)
+
+================================================================================

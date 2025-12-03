@@ -1,0 +1,89 @@
+{
+  "description": "PowerGas Profitability Calculator - Configuration File",
+  "version": "1.0",
+  "last_updated": "2025-12-03",
+
+  "trip_data": {
+    "trip_id": "TRIP-001",
+    "mother_station": "Ebedei",
+    "daughter_station": "Customer Location A",
+
+    "_comment_revenue": "=== REVENUE COMPONENTS ===",
+    "gas_volume": 5000,
+    "_gas_volume_unit": "scm (standard cubic meters)",
+    "_gas_volume_note": "Gas volume per trip, based on capacity at Mother Station",
+
+    "gas_price": 850,
+    "_gas_price_unit": "NGN per scm",
+    "_gas_price_note": "Selling price to customer at Daughter Station",
+
+    "_comment_production": "=== PRODUCTION & PLANT COSTS (per scm) ===",
+    "gas_cost": 450,
+    "_gas_cost_unit": "NGN per scm",
+    "_gas_cost_note": "Cost of gas at source Mother Station",
+
+    "plant_cost": 120,
+    "_plant_cost_unit": "NGN per scm",
+    "_plant_cost_note": "Plant operational costs allocated per scm",
+
+    "ga_cost": 80,
+    "_ga_cost_unit": "NGN per scm",
+    "_ga_cost_note": "General & Administrative costs allocated per scm",
+
+    "_comment_truck": "=== TRUCK EXPENSES (time-based) ===",
+    "truck_depreciation": 2500,
+    "_truck_depreciation_unit": "NGN per hour",
+    "_truck_depreciation_note": "Hourly depreciation of truck asset",
+
+    "truck_insurance": 1200,
+    "_truck_insurance_unit": "NGN per hour",
+    "_truck_insurance_note": "Combined interest + insurance costs per hour",
+
+    "fuel_cost": 3500,
+    "_fuel_cost_unit": "NGN per hour",
+    "_fuel_cost_note": "Fuel consumption cost per hour (to be converted to per km in future)",
+
+    "truck_turnaround_time": 12,
+    "_truck_turnaround_time_unit": "hours",
+    "_truck_turnaround_time_note": "Total time from pickup to delivery and back to pickup (sensor-tracked)",
+
+    "_comment_trucking": "=== TRUCKING COSTS (distance-based) ===",
+    "fixed_trucking_cost": 180,
+    "_fixed_trucking_cost_unit": "NGN per km",
+    "_fixed_trucking_cost_note": "Contractor fixed cost per km (varies by contractor: Diadem vs IMI)",
+
+    "variable_trucking_cost": 45,
+    "_variable_trucking_cost_unit": "NGN per km",
+    "_variable_trucking_cost_note": "Additional variable cost per km beyond thresholds",
+
+    "round_trip_distance": 240,
+    "_round_trip_distance_unit": "km",
+    "_round_trip_distance_note": "Total distance: Mother Station → Daughter Station → Mother Station (sensor-tracked)",
+
+    "_comment_skid": "=== SKID COSTS (time-based) ===",
+    "skid_depreciation": 800,
+    "_skid_depreciation_unit": "NGN per hour",
+    "_skid_depreciation_note": "Hourly depreciation of skid/trailer asset",
+
+    "skid_turnaround_time": 14,
+    "_skid_turnaround_time_unit": "hours",
+    "_skid_turnaround_time_note": "Total skid turnaround time (currently manual, transitioning to sensor)"
+  },
+
+  "_instructions": {
+    "how_to_use": "Modify the values above to test different scenarios",
+    "workflow": [
+      "1. Update the values in 'trip_data' section",
+      "2. Run the Python script: python profitability_calculator.py",
+      "3. Review the calculated profit and cost breakdown",
+      "4. For multiple scenario comparison, use scenarios.json"
+    ],
+    "important_notes": [
+      "All monetary values are in Nigerian Naira (NGN)",
+      "Gas volumes are in standard cubic meters (scm)",
+      "Distances are in kilometers (km)",
+      "Time values are in hours",
+      "Future improvements will replace some manual inputs with sensor data"
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "description": "PowerGas What-If Scenario Comparison",
+  "purpose": "Compare profitability of delivering to the same customer from different Mother Stations",
+  "version": "1.0",
+  "last_updated": "2025-12-03",
+
+  "scenarios": [
+    {
+      "name": "Scenario A: Ebedei",
+      "description": "Delivery from Ebedei Mother Station to Customer Location A",
+      "trip_data": {
+        "trip_id": "SCENARIO-A",
+        "mother_station": "Ebedei",
+        "daughter_station": "Customer Location A",
+
+        "gas_volume": 5000,
+        "gas_price": 850,
+
+        "gas_cost": 450,
+        "plant_cost": 120,
+        "ga_cost": 80,
+
+        "truck_depreciation": 2500,
+        "truck_insurance": 1200,
+        "fuel_cost": 3500,
+        "truck_turnaround_time": 12,
+
+        "fixed_trucking_cost": 180,
+        "variable_trucking_cost": 45,
+        "round_trip_distance": 240,
+
+        "skid_depreciation": 800,
+        "skid_turnaround_time": 14
+      }
+    },
+    {
+      "name": "Scenario B: Ore",
+      "description": "Delivery from Ore Mother Station to Customer Location A (closer distance)",
+      "trip_data": {
+        "trip_id": "SCENARIO-B",
+        "mother_station": "Ore",
+        "daughter_station": "Customer Location A",
+
+        "gas_volume": 5000,
+        "gas_price": 850,
+
+        "gas_cost": 470,
+        "_note_gas_cost": "Slightly higher gas cost at Ore",
+        "plant_cost": 125,
+        "ga_cost": 80,
+
+        "truck_depreciation": 2500,
+        "truck_insurance": 1200,
+        "fuel_cost": 3500,
+        "truck_turnaround_time": 8,
+        "_note_turnaround": "Reduced turnaround time due to closer proximity",
+
+        "fixed_trucking_cost": 180,
+        "variable_trucking_cost": 45,
+        "round_trip_distance": 160,
+        "_note_distance": "Significantly shorter distance from Ore",
+
+        "skid_depreciation": 800,
+        "skid_turnaround_time": 9,
+        "_note_skid_time": "Shorter skid turnaround due to proximity"
+      }
+    },
+    {
+      "name": "Scenario C: Ikorodu",
+      "description": "Delivery from Ikorodu Mother Station to Customer Location A",
+      "trip_data": {
+        "trip_id": "SCENARIO-C",
+        "mother_station": "Ikorodu",
+        "daughter_station": "Customer Location A",
+
+        "gas_volume": 5000,
+        "gas_price": 850,
+
+        "gas_cost": 460,
+        "plant_cost": 115,
+        "ga_cost": 80,
+
+        "truck_depreciation": 2500,
+        "truck_insurance": 1200,
+        "fuel_cost": 3500,
+        "truck_turnaround_time": 9,
+        "_note_turnaround": "Good turnaround time, moderately close",
+
+        "fixed_trucking_cost": 180,
+        "variable_trucking_cost": 45,
+        "round_trip_distance": 180,
+        "_note_distance": "Moderate distance from Ikorodu",
+
+        "skid_depreciation": 800,
+        "skid_turnaround_time": 10
+      }
+    },
+    {
+      "name": "Scenario D: Ogbele",
+      "description": "Delivery from Ogbele Mother Station to Customer Location A",
+      "trip_data": {
+        "trip_id": "SCENARIO-D",
+        "mother_station": "Ogbele",
+        "daughter_station": "Customer Location A",
+
+        "gas_volume": 5000,
+        "gas_price": 850,
+
+        "gas_cost": 455,
+        "plant_cost": 118,
+        "ga_cost": 80,
+
+        "truck_depreciation": 2500,
+        "truck_insurance": 1200,
+        "fuel_cost": 3500,
+        "truck_turnaround_time": 7.5,
+        "_note_turnaround": "Best turnaround time, closest station",
+
+        "fixed_trucking_cost": 180,
+        "variable_trucking_cost": 45,
+        "round_trip_distance": 150,
+        "_note_distance": "Shortest distance from Ogbele",
+
+        "skid_depreciation": 800,
+        "skid_turnaround_time": 8.5,
+        "_note_skid_time": "Best skid turnaround time"
+      }
+    }
+  ],
+
+  "_instructions": {
+    "how_to_add_scenarios": [
+      "1. Copy one of the existing scenario objects",
+      "2. Update the 'name' and 'description' fields",
+      "3. Modify the 'trip_data' values to reflect the new scenario",
+      "4. Key variables to adjust for different Mother Stations:",
+      "   - mother_station: Name of the dispatching plant",
+      "   - gas_cost: May vary by Mother Station",
+      "   - plant_cost: May vary by Mother Station",
+      "   - round_trip_distance: Critical factor - distance impacts multiple costs",
+      "   - truck_turnaround_time: Varies with distance and logistics",
+      "   - skid_turnaround_time: Varies with distance and operations"
+    ],
+    "comparison_focus": [
+      "The scenarios above compare delivering to the SAME customer from DIFFERENT Mother Stations",
+      "This allows analysis of:",
+      "- How distance affects profitability",
+      "- Which Mother Station provides best profit margin",
+      "- Time savings from using closer stations",
+      "- Cost component impact (which costs change most)"
+    ],
+    "key_insights": [
+      "Closer Mother Stations typically have:",
+      "- Lower round trip distance (reduces trucking costs)",
+      "- Lower turnaround times (reduces time-based expenses)",
+      "- Potentially different gas costs (may be higher or lower)",
+      "Net profitability depends on the balance of these factors"
+    ]
+  },
+
+  "_example_what_if_questions": {
+    "question_1": "What if we source from Ore instead of Ebedei?",
+    "answer": "Compare Scenario A vs Scenario B to see profit impact",
+
+    "question_2": "Which Mother Station gives the best profit margin?",
+    "answer": "Run the comparison report to see all scenarios ranked",
+
+    "question_3": "How much time do we save using a closer station?",
+    "answer": "Compare truck_turnaround_time and skid_turnaround_time across scenarios",
+
+    "question_4": "Which cost component has the biggest impact?",
+    "answer": "The comparison report shows cost component impact analysis"
+  }
+}
