@@ -7,6 +7,8 @@
     "trip_id": "TRIP-001",
     "mother_station": "Ebedei",
     "daughter_station": "Customer Location A",
+    "return_mother_station": "Ebedei",
+    "_return_mother_station_note": "Mother Station where truck returns after delivery (usually same as pickup station)",
 
     "_comment_revenue": "=== REVENUE COMPONENTS ===",
     "gas_volume": 5000,

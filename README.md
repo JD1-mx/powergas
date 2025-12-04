@@ -9,6 +9,7 @@ This tool helps PowerGas track and analyze the profitability of gas delivery ope
 - [Components](#components)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Streamlit Web App](#streamlit-web-app)
 - [Usage Guide](#usage-guide)
 - [Verification Examples](#verification-examples)
 - [What-If Scenario Analysis](#what-if-scenario-analysis)
@@ -19,12 +20,14 @@ This tool helps PowerGas track and analyze the profitability of gas delivery ope
 
 ## Components
 
-The system consists of four main files:
+The system consists of the following files:
 
 1. **profitability_calculator.py** - Main Python script with calculation engine
-2. **config.json** - Configuration file for single trip calculations
-3. **scenarios.json** - Multiple scenarios for what-if comparisons
-4. **README.md** - This documentation file
+2. **app.py** - Streamlit web application for interactive interface
+3. **config.json** - Configuration file for single trip calculations
+4. **scenarios.json** - Multiple scenarios for what-if comparisons
+5. **requirements.txt** - Python dependencies for the web app
+6. **README.md** - This documentation file
 
 ---
 
@@ -33,7 +36,8 @@ The system consists of four main files:
 ### Prerequisites
 
 - Python 3.7 or higher
-- No external dependencies required (uses only Python standard library)
+- For command-line calculator: No external dependencies required (uses only Python standard library)
+- For web app: Install dependencies from requirements.txt
 
 ### Setup
 
@@ -41,8 +45,10 @@ The system consists of four main files:
    ```
    powergas/
    ├── profitability_calculator.py
+   ├── app.py
    ├── config.json
    ├── scenarios.json
+   ├── requirements.txt
    └── README.md
    ```
 
@@ -53,6 +59,15 @@ The system consists of four main files:
    or
    ```bash
    python3 --version
+   ```
+
+3. Install dependencies (for web app):
+   ```bash
+   pip install -r requirements.txt
+   ```
+   or
+   ```bash
+   pip3 install -r requirements.txt
    ```
 
 ---
@@ -76,6 +91,76 @@ This will:
 2. Compare all scenarios in `scenarios.json`
 3. Generate a detailed comparison report
 4. Save the report to `profitability_report.txt`
+
+---
+
+## Streamlit Web App
+
+### Launch the Interactive Web Interface
+
+For a better user experience with interactive forms, visualizations, and comparisons:
+
+```bash
+streamlit run app.py
+```
+
+The app will automatically open in your default browser at `http://localhost:8501`
+
+### Features
+
+The Streamlit app provides three main modules:
+
+#### 1. Single Trip Calculator
+- Interactive form for all input parameters
+- Real-time profitability calculation
+- Visual cost breakdown with pie charts
+- Key metrics display (Revenue, Costs, Profit, Margin)
+- Load values from config.json with one click
+
+#### 2. Scenario Comparison
+- Compare multiple scenarios side-by-side
+- Interactive charts and visualizations
+  - Profit comparison bar charts
+  - Profit margin comparison
+  - Revenue vs Costs grouped bar charts
+- Scenario rankings with medals
+- Cost component impact analysis
+- Detailed comparison table
+- Export results as CSV or JSON
+
+#### 3. About
+- Formula reference
+- Component explanations
+- Feature overview
+- Development roadmap
+
+### Using the Web App
+
+1. **Single Trip Mode**:
+   - Click "Single Trip Calculator" in the sidebar
+   - Fill in the form or load from config.json
+   - Click "Calculate Profitability"
+   - View results and charts
+
+2. **Scenario Comparison Mode**:
+   - Click "Scenario Comparison" in the sidebar
+   - Load scenarios from scenarios.json
+   - View automatic comparison with charts
+   - Analyze cost impacts
+   - Export results
+
+3. **Quick Actions** (Sidebar):
+   - "Load from config.json" - Import single trip data
+   - "Load scenarios.json" - Import comparison scenarios
+
+### Screenshots
+
+The app includes:
+- 📊 Interactive Plotly charts
+- 🎨 Clean, professional UI
+- 📱 Responsive design
+- 💾 Export capabilities (CSV/JSON)
+- 🔄 Real-time calculations
 
 ---
 
